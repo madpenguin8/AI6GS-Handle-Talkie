@@ -108,7 +108,12 @@ void setup()
     
     // Load the background and setup the display
     SD.begin(SD_CS);
-    bmpDraw("htBG.bmp", 0, 0);
+    tft.fillScreen(ILI9341_BLACK);
+    bmpDraw("left.bmp", 0, 0);
+    bmpDraw("right.bmp", 180, 0);
+    bmpDraw("up.bmp", 0, 260);
+    bmpDraw("down.bmp", 180, 260);
+
     
     drawStatics();
     tftDrawVolume();
